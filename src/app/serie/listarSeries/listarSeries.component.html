@@ -1,0 +1,25 @@
+<div class="container-fluid" id ="tabla">
+  <div class="col-4">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th><b>#</b></th>
+          <th><b>Name</b></th>
+          <th><b>Channel</b></th>
+          <th><b>Seasons</b></th>
+        </tr>
+      </thead>
+      <tbody style="background-color:#F2F2F2;" id = "series">
+        <tr *ngFor="let ser of series">
+          <td><b>{{ser.id}}</b></td>
+          <td>
+            <dd><a href={{ser.webpage}}>{{ser.name}}</a></dd>
+          </td>
+          <td>{{ser.channel}}</td>
+          <td>{{ser.seasons}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Seasons Average: {{promedio}}</p>
+  </div>
+</div>
